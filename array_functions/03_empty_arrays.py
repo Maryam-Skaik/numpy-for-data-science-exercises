@@ -2,31 +2,29 @@
 empty() Function
 ================
 Creates arrays without initializing values.
-Used when performance is critical.
 """
 
 import numpy as np
 
-# 1D arrays
 e = np.empty(3)
-print(e)
+# Result: random garbage values
 
 e = np.empty(3, dtype=int)
-print(e)
+# Result: random integers
 
 e = np.empty(3, dtype=object)
-print(e)
+# Result: [None None None]
 
-# 2D arrays
 e = np.empty((2, 2))
-print(e)
+# Result: uninitialized 2D array
 
 e = np.empty((2, 2), dtype=int)
-print(e)
+# Result: random integers
 
 e = np.empty((2, 2), dtype=object)
-print(e)
+# Result:
+# [[None None]
+#  [None None]]
 
-# 3D array
 e = np.empty((2, 2, 2))
-print(e)
+# Result: uninitialized 3D array
