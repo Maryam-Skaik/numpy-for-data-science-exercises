@@ -1,154 +1,121 @@
 """
-NumPy Random Module
-------------------
-This file demonstrates the most common random number generation
-functions used in NumPy for data science and simulations.
+NumPy Random Number Generation
+=============================
 
-Important note:
-Random numbers are NOT truly random — they are pseudo-random,
-generated using algorithms.
+This file demonstrates the most commonly used random functions in NumPy.
+All results are written as comments for learning and revision purposes.
 """
 
 import numpy as np
 
-
 # ============================================================
-# 1. np.random.random()
+# np.random.random()
 # ============================================================
-# Generates random floating-point numbers in the range:
-#   0.0 <= number < 1.0
-#
-# If no shape is given → returns a single float
-# If shape is given → returns a NumPy array
 
 x = np.random.random()
-print(x)  # single random float between 0 and 1
+# Example output: 0.5488135
 
 x = np.random.random(2)
-print(x)  # 1D array with 2 random floats
+# Example output: [0.71518937 0.60276338]
 
 x = np.random.random((2, 2))
-print(x)  # 2D array (2 rows, 2 columns)
+# Example output:
+# [[0.54488318 0.4236548 ]
+#  [0.64589411 0.43758721]]
 
 x = np.random.random((2, 3, 2))
-print(x)  # 3D array
+# Example output:
+# [[[0.891773   0.96366276]
+#   [0.38344152 0.79172504]
+#   [0.52889492 0.56804456]]
+#
+#  [[0.92559664 0.07103606]
+#   [0.0871293  0.0202184 ]
+#   [0.83261985 0.77815675]]]
 
 
 # ============================================================
-# 2. np.random.randint()
+# np.random.randint()
 # ============================================================
-# Generates random integers
-#
-# Syntax:
-# np.random.randint(low, high, size)
-#
-# - low is inclusive
-# - high is exclusive
-# - numbers CAN repeat
 
 x = np.random.randint(2, 70)
-print(x)  # one integer between 2 and 69
+# Example output: 45
 
 x = np.random.randint(2, 70, size=3)
-print(x)  # array of 3 integers
+# Example output: [12 56 33]
 
 x = np.random.randint(5)
-print(x)  # integer between 0 and 4
+# Example output: 3
 
 
 # ============================================================
-# 3. np.random.rand()
+# np.random.rand()
 # ============================================================
-# Similar to np.random.random()
-# Difference:
-# - rand() takes shape as separate arguments
-# - random() takes shape as a tuple
 
 x = np.random.rand()
-print(x)
+# Example output: 0.417022
 
 x = np.random.rand(2)
-print(x)
+# Example output: [0.72032449 0.00011437]
 
 x = np.random.rand(2, 2)
-print(x)
+# Example output:
+# [[0.30233257 0.14675589]
+#  [0.09233859 0.18626021]]
 
 x = np.random.rand(2, 3, 2)
-print(x)
-
-# Comparison:
-# np.random.random((2,2))  ✅ tuple
-# np.random.rand(2,2)      ✅ separate arguments
+# Example output: 3D array of floats
 
 
 # ============================================================
-# 4. np.random.randn()
+# np.random.randn()
 # ============================================================
-# Generates numbers from the STANDARD NORMAL DISTRIBUTION:
-# - Mean = 0
-# - Standard deviation = 1
-#
-# Values can be positive or negative
 
 x = np.random.randn()
-print(x)
+# Example output: -0.52817175
 
 x = np.random.randn(2)
-print(x)
+# Example output: [ 0.86540763 -2.3015387 ]
 
 x = np.random.randn(2, 2)
-print(x)
-
-x = np.random.randn(2, 3, 2)
-print(x)
+# Example output:
+# [[ 1.74481176 -0.7612069 ]
+#  [ 0.3190391  -0.24937038]]
 
 
 # ============================================================
-# 5. np.random.uniform()
+# np.random.uniform()
 # ============================================================
-# Generates random floating-point numbers from a given range
-#
-# Syntax:
-# np.random.uniform(low, high, size)
-#
-# - low is inclusive
-# - high is exclusive
-# - values MAY repeat (important correction)
 
 x = np.random.uniform(4, 20)
-print(x)
+# Example output: 14.239
 
 x = np.random.uniform(4, 20, size=3)
-print(x)
+# Example output: [ 6.3 18.9 10.4 ]
 
 x = np.random.uniform(6)
-print(x)  # between 0 and 6
+# Example output: 3.27
 
 x = np.random.uniform()
-print(x)  # between 0 and 1
+# Example output: 0.92
 
 
 # ============================================================
-# 6. np.random.choice()
+# np.random.choice()
 # ============================================================
-# Randomly selects elements from a sequence or range
-#
-# By default:
-# - replace=True  → values can repeat
-# - range starts from 0 if an integer is given
 
 x = np.random.choice([2, 4, 8, 19, 90, 7, 20])
-print(x)
+# Example output: 19
 
 x = np.random.choice([2, 4, 8, 19, 90, 7, 20], size=3)
-print(x)
+# Example output: [ 7 90  4]
 
 x = np.random.choice(40, size=5)
-print(x)  # values from 0 to 39
+# Example output: [12  3 27 18  5]
 
 x = np.random.choice(
     [2, 4, 8, 19, 90, 7, 20],
     size=3,
     replace=False
 )
-print(x)  # no repetition allowed
+# Example output: [19  7  4]
