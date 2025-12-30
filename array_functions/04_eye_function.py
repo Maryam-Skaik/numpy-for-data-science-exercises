@@ -6,25 +6,29 @@ Creates a 2D array with ones on a specified diagonal.
 
 import numpy as np
 
-# Main diagonal
 a = np.eye(3)
-print(a)
+# [[1. 0. 0.]
+#  [0. 1. 0.]
+#  [0. 0. 1.]]
 
-# Upper diagonal
 a = np.eye(3, k=1)
-print(a)
+# [[0. 1. 0.]
+#  [0. 0. 1.]
+#  [0. 0. 0.]]
 
-# Lower diagonal
 a = np.eye(3, k=-1)
-print(a)
+# [[0. 0. 0.]
+#  [1. 0. 0.]
+#  [0. 1. 0.]]
 
-# Integer dtype
 a = np.eye(3, dtype=int)
-print(a)
+# [[1 0 0]
+#  [0 1 0]
+#  [0 0 1]]
 
-# Rectangular matrix
 a = np.eye(3, 2)
-print(a)
+# [[1. 0.]
+#  [0. 1.]
+#  [0. 0.]]
 
-# Dimension check
-print(a.ndim)
+# a.ndim = 2
