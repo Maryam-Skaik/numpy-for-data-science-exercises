@@ -110,9 +110,9 @@ numpy-for-data-science/
 
 2. Install dependencies:
 
-  ```bash
-  pip install numpy
-  ```
+   ```bash
+   pip install numpy
+   ```
 
 3. Run any file:
 
