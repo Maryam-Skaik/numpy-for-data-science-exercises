@@ -2,28 +2,27 @@
 linspace() Function
 ===================
 Returns evenly spaced numbers over a specified interval.
-Commonly used in plotting and numerical analysis.
 """
 
 import numpy as np
 
-# Basic usage
 a = np.linspace(2, 20, num=10)
-print(a)
+# Result:
+# [ 2.  4.  6.  8. 10. 12. 14. 16. 18. 20.]
 
-# endpoint=False excludes the stop value
 a = np.linspace(2, 20, num=10, endpoint=False)
-print(a)
+# Result:
+# [ 2.   3.8  5.6  7.4  9.2 11.  12.8 14.6 16.4 18.2]
 
-# retstep returns the step size
 a, step = np.linspace(2, 20, num=10, retstep=True)
-print(a)
-print("Step size:", step)
+# a:
+# [ 2.  4.  6.  8. 10. 12. 14. 16. 18. 20.]
+# step:
+# 2.0
 
-# dtype=int truncates values
 a = np.linspace(2, 20, dtype=int)
-print(a)
+# Result:
+# [ 2  2  4  6  8 10 12 14 16 18]
 
-# Default behavior → 50 values
 a = np.linspace(2, 20)
-print(len(a))
+# len(a) = 50
