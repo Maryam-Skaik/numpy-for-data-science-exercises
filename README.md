@@ -1,6 +1,6 @@
 # 🚀 NumPy for Data Science – Real-Time Coding Exercises
 
-This repository contains my complete implementations and practice code for the Udemy course:
+This repository contains my **hands-on practice code and structured** examples created while studying NumPy through the Udemy course:
 
 **Numpy For Data Science – Real Time Coding Exercises**
 
@@ -11,83 +11,92 @@ https://www.udemy.com/course-dashboard-redirect/?course_id=5429576
 
 ## 📌 About This Repository
 
-This repository is a structured collection of **real-time coding exercises** created while studying NumPy for data science applications.
+This repository is a **concept-organized NumPy practice notebook**, written entirely by me while learning and experimenting with NumPy concepts used in data science and scientific computing.
 
-The goal is to:
-- Master NumPy as the core numerical computing library in Python
-- Understand how NumPy arrays work internally
-- Apply NumPy operations efficiently for data analysis and scientific computing
-- Build strong foundations required for Machine Learning and Data Science workflows
+The focus is on:
 
-All code is written and organized by me while following the course content.
+- Understanding NumPy arrays and operations deeply
+- Writing clear, readable, and well-commented code
+- Practicing core NumPy APIs used in data analysis and ML pipelines
+- Building a strong foundation before moving to Pandas, ML, and AI workflows
 
----
-
-## 🧠 What You’ll Learn
-
-- Fundamentals of the NumPy library
-- NumPy arrays: 1D, 2D, and 3D
-- Array creation techniques (zeros, ones, full, empty, identity, eye)
-- Array reshaping and dimensional analysis
-- Data types, memory layout, and performance concepts
-- Indexing techniques:
-  - Slicing
-  - Integer indexing
-  - Boolean indexing
-  - Mixed indexing
-- Vectorized operations and broadcasting
-- Random number generation
-- Statistical and aggregation functions
-- Linear algebra basics using NumPy
-- Real-time numerical problem solving
+All examples are implemented as **plain Python scripts** to emphasize core NumPy behavior without abstractions.
 
 ---
 
-## 🧪 Core NumPy Concepts Practiced
+## 🧠 Learning Objectives
 
-The repository includes hands-on usage of:
+By working through this repository, I practiced:
 
-- `np.array`, `np.asarray`
-- `np.arange`, `np.linspace`
-- `reshape`, `flatten`, `transpose`
-- `ndim`, `shape`, `size`, `dtype`, `itemsize`
-- Arithmetic and vectorized operations
-- `np.zeros`, `np.ones`, `np.full`
-- `np.zeros_like`, `np.ones_like`, `np.full_like`
-- Random module:
-  - `random`, `rand`, `randint`, `randn`
-  - `uniform`, `choice`, `normal`
-- `np.eye`, `np.identity`, `np.diag`
-- `np.stack`, `vstack`, `hstack`, `column_stack`
-- Dot product and matrix multiplication
-- Aggregations:
-  - `sum`, `mean`, `std`, `var`, `min`, `max`
-- Conditional replacement and filtering
-- Row/column extraction techniques
+- Creating and manipulating NumPy arrays (1D, 2D, 3D)
+- Understanding shape, dimension, size, and data types
+- Performing array indexing, slicing, and boolean masking
+- Applying vectorized operations and broadcasting
+- Using NumPy’s random module for simulations
+- Working with identity, diagonal, and transpose operations
+- Applying aggregation and logical functions
+- Writing NumPy code suitable for real-world data science tasks
 
 ---
 
 ## 📂 Repository Structure
 
-```bash
-numpy-for-data-science-exercises/
+```pgsql
+numpy-for-data-science/
 │
-├── basics/
-├── array-creation/
-├── reshaping-and-properties/
-├── indexing-and-slicing/
-├── array-operations/
-├── random-and-statistics/
-├── linear-algebra/
-├── real-time-exercises/
+├── array_creation/
+│   └── Array initialization techniques (zeros, ones, full, linspace, etc.)
+│
+├── array_operations/
+│   └── Stacking, indexing, slicing, and basic array manipulation
+│
+├── array_functions/
+│   └── Core NumPy functions (random, eye, identity, diag, transpose, any/all)
+│
+├── array_basics/
+│   └── Aggregation and fundamental array operations
+│
 └── README.md
 ```
 
-Each folder contains:
+### Folder Design Principles
 
-- Jupyter notebooks or Python scripts
-- Clean, readable code
-- Practical examples aligned with the course lessons
+- **Numbered files** reflect learning order
+- **Each file focuses on a single concept**
+- **Expected outputs are preserved as comments**
+- Code is intentionally explicit and beginner-friendly
+
+---
+
+## Core NumPy Concepts Covered
+
+### Array Creation
+
+- `np.array`
+- `np.zeros`, `np.ones`, `np.full`, `np.empty`
+- `np.arange`, `np.linspace`
+- `np.eye`, `np.identity`
+
+### Indexing & Operations
+
+- Basic indexing and slicing
+- Boolean indexing
+- `vstack`, `hstack`
+- Shape transformations
+- Transpose operations
+
+### Random Module
+
+- `random`, `rand`, `randint`, `randn`
+- `uniform`, `choice`
+- Differences between random generators
+
+### Utility & Logical Functions
+
+- `np.diag`
+- `np.any`, `np.all`
+- Aggregations: `sum`, `min`, `max`
+- Axis-based operations
 
 ---
 
@@ -96,7 +105,7 @@ Each folder contains:
 1. Clone the repository:
    
    ```bash
-   git clone https://github.com/Maryam-Skaik/numpy-for-data-science-exercises.git
+   git clone https://github.com/Maryam-Skaik/numpy-for-data-science.git
    ```
 
 2. Install dependencies:
@@ -121,10 +130,10 @@ Each folder contains:
 
 ## 📎 Notes
 
-- This repository is for learning and practice purposes.
+- This repository is for **learning and practice purposes**.
+- Code prioritizes **clarity over compactness**.
 - Implementations may differ from the instructor’s solutions.
-- The repository will be updated as the course progresses.
-
+- The repository represents my **personal learning journey**.
 ---
 
 ## 📄 License
